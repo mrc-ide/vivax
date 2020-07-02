@@ -5,7 +5,7 @@
 \title{Fitting eir.}
 \usage{
 fit_mv(
-  variable = "Pv_clin_2_10",
+  variable = "Pv_clin",
   target,
   rows,
   model = NULL,
@@ -19,7 +19,7 @@ fit_mv(
 )
 }
 \arguments{
-\item{variable}{The name of the output variable to be fitted (eg: "prev_2_10" or "clin_inc_all"). This must be
+\item{variable}{The name of the output variable to be fitted (eg: "Pv_clin" or "PvPR_LM_2_10"). This must be
 a variable name in the output.}
 
 \item{target}{The target value(s) of the specified variable. These may be a single value or vector.}
@@ -36,7 +36,7 @@ a variable name in the output.}
 \item{maxiter}{The maximum number of iterations (model runs) to search for. Importantn for keeping timescales reasonable
 when fitting many sites.}
 
-\item{verbose}{Output is printed during each iteration, including the current total_M and the output target value.}
+\item{verbose}{Output is printed during each iteration, including the current EIR_equil and the output target value.}
 
 \item{extendInt}{Extend the search interval, see \link[stats]{uniroot} for more details}
 
@@ -45,6 +45,6 @@ when fitting many sites.}
 \item{...}{Additional arguments to \code{fit_v()}}
 }
 \description{
-Provides basic functionality for fitting the EIR_equil parameter in a site file
+Provides basic functionality for fitting the EIR_equil parameter for a site file
 to specified data (usually prevalence or incidence) at given time point(s).
 }

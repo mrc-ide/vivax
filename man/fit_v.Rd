@@ -4,21 +4,21 @@
 \alias{fit_v}
 \title{Internal: Fitting EI.}
 \usage{
-fit_v(total_M, target, variable, rows, tolerance, verbose, model, ...)
+fit_v(EIR_equil, target, variable, rows, tolerance, verbose, model, ...)
 }
 \arguments{
-\item{total_M}{The eir for the current model run}
+\item{EIR_equil}{The eir for the current model run}
 
 \item{target}{The target value(s) of the specified variable. These may be a single value or vector.}
 
-\item{variable}{The name of the output variable to be fitted (eg: "prev_2_10" or "clin_inc_all"). This must be
+\item{variable}{The name of the output variable to be fitted (eg: "Pv_clin" or "PvPR_LM_2_10"). This must be
 a variable name in the output.}
 
 \item{rows}{The output row(s)/position(s). These may be a single value or vector.}
 
 \item{tolerance}{The desired tolerance of the fit. The fit being succesful when the \code{abs(variable - target) < tolerance)}.}
 
-\item{verbose}{Output is printed during each iteration, including the current total_M and the output target value.}
+\item{verbose}{Output is printed during each iteration, including the current EIR_equil and the output target value.}
 
 \item{model}{A named list of parameters to override in the
 "model_parameters.txt" file}
